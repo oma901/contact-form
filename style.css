@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eef3f7;
+    color: #222;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 440px;
+    background: #fff;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0 0 22px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #b7c3cc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+
+
+textarea {
+    resize: vertical;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
+.error {
+    display: block;
+    min-height: 18px;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #c62828;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 5px;
+    background: #2278b8;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:hover {
+    background: #1b679f;
+}
+
+button:disabled {
+    background: #8ca7bb;
+    cursor: default;
+}
+
+.button-loader {
+    display: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+button.loading .button-loader {
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.result {
+    min-height: 22px;
+    margin: 18px 0 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.result.success {
+    color: #1b7f3a;
+}
+
+.result.error {
+    color: #c62828;
+}
